@@ -1,7 +1,7 @@
 <template>
     <div class="user" >
-       
-        <h1>User: {{$route.params.benutzername}}</h1>
+       <input type="text" name="" id="" v-model="bname">
+        <h1>User: {{$route.query.benutzername}}</h1>
         <div class="links">
             <router-link :to="{name:'profile'}">Profile</router-link>
             <router-link :to="{name:'post'}">Post</router-link>
@@ -14,7 +14,14 @@
 
 </template>
 <script>
-
+export default
+{
+    data(){
+        return{
+            bname:this.benutzername
+        }
+    }
+}
 </script>
 <style scoped>
 .user
